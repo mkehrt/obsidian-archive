@@ -1,12 +1,12 @@
 import {App, PluginSettingTab, Setting} from "obsidian";
 import MyPlugin from "./main";
 
-export interface MyPluginSettings {
-	mySetting: string;
+export interface ArchivePluginSettings {
+	archiveFolder: string;
 }
 
-export const DEFAULT_SETTINGS: MyPluginSettings = {
-	mySetting: 'default'
+export const DEFAULT_SETTINGS: ArchivePluginSettings = {
+	archiveFolder: 'Done'
 }
 
 export class SampleSettingTab extends PluginSettingTab {
@@ -23,13 +23,13 @@ export class SampleSettingTab extends PluginSettingTab {
 		containerEl.empty();
 
 		new Setting(containerEl)
-			.setName('Settings #1')
-			.setDesc('It\'s a secret')
+			.setName('Archive Folder')
+			.setDesc('The folder to archive notes to.')
 			.addText(text => text
-				.setPlaceholder('Enter your secret')
-				.setValue(this.plugin.settings.mySetting)
+				.setPlaceholder('Done')
+				.setValue(this.plugin.settings.archiveFolder)
 				.onChange(async (value) => {
-					this.plugin.settings.mySetting = value;
+					this.plugin.settings.archiveFolder = value;
 					await this.plugin.saveSettings();
 				}));
 	}

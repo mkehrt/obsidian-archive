@@ -1,11 +1,10 @@
 {
-	"id": "sample-plugin",
-	"name": "Sample Plugin",
+	"id": "archive-plugin",
+	"name": "Archive Plugin",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"description": "Archive your notes to a specific folder.",
+	"author": "Matthew Kehrt",
+	"authorUrl": "https://github.com/mkehrt",
 	"isDesktopOnly": false
 }
